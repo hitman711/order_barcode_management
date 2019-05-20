@@ -11,19 +11,13 @@ Installation
 ------------
 1. Create a Virtual environment using python3
 
-.. code-block:: sh
-
     python3 -m venv .env
 
 2. Activate the environment
 
-.. code-block:: sh
-
     source .env/bin/activate
 
 3. Install dependencies
-
-.. code-block:: sh
 
     pip install -r requirements.txt
 
