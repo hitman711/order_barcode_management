@@ -52,7 +52,9 @@ def filter_operation():
     # Collect order list
     order_list = order_set()
     # Merge both list
-    new_list = pd.merge(order_list, barcode_list, on='order_id')
+    new_list = pd.merge(
+        order_list, barcode_list, on='order_id'
+    ).sort_values(by='customer_id', ascending=True)
     # Reindex column for export file
     new_list = new_list.reindex(columns=['customer_id', 'order_id', 'barcode'])
     # Store data in export file
